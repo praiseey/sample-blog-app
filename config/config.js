@@ -16,7 +16,7 @@ module.exports = {
   },
   production: {
     username: "traineeUser",
-    password: "traineePassword0",
+    password: "traineePassword",
     database: "postgres",
     host: "traineedb.cgq0reqixqsd.us-east-1.rds.amazonaws.com",
     dialect: 'postgres' 
