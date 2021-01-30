@@ -83,7 +83,7 @@ router.post('/user/create', user_controller.user_create_post);
  router.post('/user/:userpraises_id/update', user_controller.user_update_post);
 
 // // GET request for one Author.
-// router.get('/author/:author_id', author_controller.author_detail);
+ router.get('/user/:userpraises_id', user_controller.user_detail);
 
 // // GET request for list of all Authors.
  router.get('/users', user_controller.user_list);

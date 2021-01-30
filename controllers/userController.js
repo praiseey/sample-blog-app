@@ -106,11 +106,14 @@ exports.user_list = function(req, res, next) {
  };
 
 // // Display detail page for a specific author.
-// exports.author_detail = function(req, res, next) {
+ exports.user_detail = function(req, res, next) {
 //         // GET controller logic to display just one author
-        
-//         // renders an individual author details page
-//         res.render('pages/author_detail', { title: 'Author Details',  layout: 'layouts/detail'} );
-// };
+            models.userpraises.findOne(
+            ).then(function(user) {
+                // renders an individual author details page
+                res.render('pages/user_detail', { title: 'User Details', user:user, layout: 'layouts/detail'} );
+            });
+//         
+ };
 
  

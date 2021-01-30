@@ -146,7 +146,16 @@
         </div>
     </div>
 <% } else if (title == 'User Details') { %>
-
+    <div class="col-sm-8">    
+        <div class="">
+             <h1>Details of a Single User</h1>
+             <p>I am a user for this ID = <%= user.id %></p>
+             <p>Full Name: <%= user.full_name %></p>
+             <p>Username:  <%= user.username %></p>
+             <p>Email:  <%= user.email %></p>
+             <a href="/blog/user/<%= user.id %>/update">Edit  User</a> | <a href="/blog/user/<%= user.id %>/delete">Delete Post</a>
+        </div>
+    </div>
 <% } else if (title == 'User List') { %>
     <div class="col-sm-8">    
         <div class="">
