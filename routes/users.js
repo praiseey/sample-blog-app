@@ -3,40 +3,40 @@ var express = require('express');
 var router  = express.Router();
 
 
-// Require our controllers.
-var user_controller = require('../controllers/userController');
+// // Require our controllers.
+// var user_controller = require('../controllers/userController');
 
-/// USER ROUTES ///
+// /// USER ROUTES ///
 
-// GET USER home page.
-//router.get('/', timesheet_controller.index); 
+// // GET USER home page.
+// //router.get('/', timesheet_controller.index); 
 
-// GET request for creating a User. NOTE This must come before routes that display User (uses id).
-router.get('user/create', user_controller.user_create_get);
+// // GET request for creating a User. NOTE This must come before routes that display User (uses id).
+// router.get('user/create', user_controller.user_create_get);
 
-// POST request for creating User.
-router.post('/create', user_controller.user_create_post);
+// // POST request for creating User.
+// router.post('/create', user_controller.user_create_post);
 
-// GET request for one User.
-router.get('/:id', user_controller.user_detail);
+// // GET request for one bser.
+// router.get('/:id', user_controller.user_detail);
 
-// GET request for list of all Users.
-router.get('/users', user_controller.user_list);
+// // GET request for list of all Users.
+// router.get('/users', user_controller.user_list);
 
-// GET request to update User.
-router.get('/:id/update', user_controller.user_update_get);
+// // GET request to update User.
+// router.get('/:id/update', user_controller.user_update_get);
 
-// POST request to update User.
-router.post('/:id/update', user_controller.user_update_post);
+// // POST request to update User.
+// router.post('/:id/update', user_controller.user_update_post);
 
-// GET request to delete User.
-router.get('/:id/delete', user_controller.user_delete_get);
+// // GET request to delete User.
+// router.get('/:id/delete', user_controller.user_delete_get);
 
-// POST request to delete User.
-router.post('/:id/delete', user_controller.user_delete_post);
+// // POST request to delete User.
+// router.post('/:id/delete', user_controller.user_delete_post);
 
-// export all the router created
-//module.exports = router;
+// // export all the router created
+// //module.exports = router;
 
 
 router.post('/create', function(req, res) {

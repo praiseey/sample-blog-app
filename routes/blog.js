@@ -64,29 +64,29 @@ router.get('/authors', author_controller.author_list);
 
 // USER ROUTES //
 
-// GET request for creating User. 
+// GET request for creating User. NOTE This must come before route for id (i.e. display user).
 router.get('/user/create', user_controller.user_create_get);
 
-// POST request for creating User.
+// // POST request for creating Userr.
 router.post('/user/create', user_controller.user_create_post);
 
-// GET request to delete User.
-router.get('/user/:user_id/delete', user_controller.user_delete_get);
+// // GET request to delete User.
+ router.get('/user/:userpraises_id/delete', user_controller.user_delete_get);
 
-// POST request to delete User
-router.post('/user/:user_id/delete', user_controller.user_delete_post);
+// // POST request to delete User
+ router.post('/user/:userpraises_id/delete', user_controller.user_delete_post);
 
-// GET request to update User.
-router.get('/user/:user_id/update', user_controller.user_update_get);
+// // GET request to update User.
+ router.get('/user/:userpraises_id/update', user_controller.user_update_get);
 
-// POST request to update User.
-router.post('/user/:user_id/update', user_controller.user_update_post);
+// // POST request to update Author.
+ router.post('/user/:userpraises_id/update', user_controller.user_update_post);
 
-// GET request for one User.
-router.get('/user/:user_id', user_controller.user_detail);
+// // GET request for one Author.
+// router.get('/author/:author_id', author_controller.author_detail);
 
-// GET request for list of all Users.
-router.get('/users', user_controller.user_list);
+// // GET request for list of all Authors.
+ router.get('/users', user_controller.user_list);
 
 
 /// Category ROUTES ///

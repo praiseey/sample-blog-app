@@ -76,44 +76,102 @@
 
 <!--AUTHOR VIEW STARTS HERE -->
 <!--complete logic for author view-->
-<% if (title == 'Create Author') { %>
+<% if (title == 'Create Author') {%>
 
 <% } else if (title == 'Delete Author') { %>
-     
+
 <% } else if (title == 'Update Author') { %>
-   
+
 <% } else if (title == 'Author Details') { %>
- 
+
 <% } else if (title == 'Author List') { %>
-  
-<% } else { %>
-  
-<% } %>
-<!--AUTHOR VIEW END HERE-->
 
-<!--USER VIEW STARTS HERE-->
+<% } else { %>
+
+<% } %>
+
+<!-- AUTHOR VIEW END HERE -->
+
+
+<!-- USER VIEW -->
 <% if (title == 'Create User') { %>
-
+    <div class="col-sm-8">    
+        <div class="jumbotron">
+            <form action="" method="post">
+              Full Name:<br>
+              <input type="text" name="full_name" placeholder="Full Name">
+              <br>
+              Username:<br>
+              <input type="text" name="username" placeholder="Username">
+              <br>
+              Email:<br>
+              <input type="text" name="email" placeholder="Email">
+              <br>
+              Password:<br>
+              <input type="text" name="password" placeholder="Password">
+              <br><br>
+              <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
 <% } else if (title == 'Delete User') { %>
-    
+     <div class="col-sm-8">    
+        <div class="jumbotron">
+            <form action="/blog/user/<%= user.id %>/delete" method="post">
+              ID:<br>
+              <input type="text" name="id" placeholder="user id">
+              <br><br>
+              <input type="submit" value="Delete">
+            </form>
+        </div>
+    </div>
 <% } else if (title == 'Update User') { %>
-    
+    <div class="col-sm-8">    
+        <div class="jumbotron">
+            <form action="/blog/user/<%= userpraises.id %>/update" method="post">
+              Full Name:<br>
+              <input type="text" name="full_name" value="user.full_name">
+              <br>
+              Username:<br>
+              <input type="text" name="username" value="user.username">
+              <br>
+              Email:<br>
+              <input type="text" name="email" value="user.email">
+              <br>
+              Password:<br>
+              <input type="text" name="password" value="user.password">
+              <br><br>
+              <input type="submit" value="Update">
+            </form>
+        </div>
+    </div>
 <% } else if (title == 'User Details') { %>
-    
+
 <% } else if (title == 'User List') { %>
-    
+    <div class="col-sm-8">    
+        <div class="">
+        <ol>
+        <% users.forEach(function(user) { %>
+                <li>
+                    <h4><a href="/blog/user/<%= user.id %>"><%= user.full_name %></a></h4>
+                    <p>Username: <%= user.username %></p>
+                     <a href="/blog/user/<%= user.id %>/update">Edit  Post</a> | <a href="/blog/user/<%= user.id %>/delete">Delete User</a>
+                </li>
+            <br/>
+        <% }); %>
+        </ol>
+    </div>
+    </div>
 <% } else { %>
-    
+    <div class="col-sm-8">    
+        <div class="jumbotron">
+            <h1><%= title %></h1>
+            <p>The main content of the page goes here</p>
+        </div>
+    </div>
 <% } %>
-<!--USER VIEW ENDS HERE-->
 
-<!--COMMENT VIEW STARTS HERE-->
-<!--complete logic for category view-->
 
-<!--COMMENT VIEW END HERE-->
-
-<!--CATEGORY VIEW START HERE-->
-<!--complete logic for category view-->
 <!--CATEGORY VIEW END HERE-->
 
 

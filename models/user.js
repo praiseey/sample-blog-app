@@ -14,7 +14,7 @@
 
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  var User = sequelize.define('User', {
+  var userpraises = sequelize.define('userpraises', {
     id: {
       type: DataTypes.INTEGER,
             primaryKey: true,
@@ -34,12 +34,12 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       validate: {
         notEmpty: true,
-        is: ["^[a-z]+$",'i'],
+        // is: ["^[a-z]+$",'i'],
       }
     },
     created_dt: DataTypes.DATE,
   });
 
-  return User;
+  return userpraises;
 };
  
