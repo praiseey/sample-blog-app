@@ -237,7 +237,7 @@ exports.post_delete_post = function(req, res, next) {
 exports.index = function(req, res) {
 
       // find the count of posts in database
-      models.Post.findAndCountAll(
+      models.Postpraise.findAndCountAll(
       ).then(function(postCount) {
           
        
